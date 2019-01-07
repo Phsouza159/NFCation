@@ -1,0 +1,181 @@
+[07-Jan-2019 03:09:34 Europe/Paris] PHP Fatal error:  Class 'teste\Notification\NFCation' not found in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php on line 7
+[07-Jan-2019 03:10:28 Europe/Paris] PHP Fatal error:  Class 'teste\Notification\NFCation' not found in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php on line 7
+[07-Jan-2019 03:11:03 Europe/Paris] PHP Fatal error:  Class 'Notification\Notification\OBNotification' not found in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php on line 7
+[07-Jan-2019 03:11:24 Europe/Paris] PHP Fatal error:  Interface 'Notification\IOBNotification' not found in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 7
+[07-Jan-2019 03:11:43 Europe/Paris] PHP Fatal error:  Interface 'Notification\Notification\IOBNotification' not found in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 7
+[07-Jan-2019 03:12:05 Europe/Paris] PHP Fatal error:  Interface 'Notification\IOBNotification' not found in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 7
+[07-Jan-2019 03:12:32 Europe/Paris] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Notification\NFCation::__construct(), 0 passed in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php on line 20 and exactly 1 expected in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php:11
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): Notification\NFCation->__construct()
+#1 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php on line 11
+[07-Jan-2019 03:14:42 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Notification\NFCation::__construct() must be an instance of Notification\Object, instance of teste\teste given, called in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php on line 15 and defined in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php:11
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(15): Notification\NFCation->__construct(Object(teste\teste))
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(19): teste\teste->__construct()
+#2 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php on line 11
+[07-Jan-2019 03:25:29 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to undefined function Notification\var_drump() in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php:13
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(16): Notification\NFCation->__construct()
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): teste\teste->__construct()
+#2 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php on line 13
+[07-Jan-2019 03:25:51 Europe/Paris] PHP Warning:  array_keys() expects parameter 1 to be array, null given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php on line 13
+[07-Jan-2019 03:26:57 Europe/Paris] PHP Notice:  Trying to get property of non-object in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\NFCation.php on line 15
+[07-Jan-2019 03:36:20 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to undefined function Notification\GetVar() in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:16
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(16): Notification\OBNotification->__construct()
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): teste\teste->__construct()
+#2 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 16
+[07-Jan-2019 03:37:56 Europe/Paris] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Notification\OBNotification::GetVar(), 0 passed in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 16 and exactly 1 expected in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:19
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(16): Notification\OBNotification->GetVar()
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(16): Notification\OBNotification->__construct()
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): teste\teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 19
+[07-Jan-2019 03:38:06 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Notification\OBNotification::GetVar() must be an instance of Notification\Object, instance of teste\teste given, called in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 16 and defined in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:19
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(16): Notification\OBNotification->GetVar(Object(teste\teste))
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(16): Notification\OBNotification->__construct()
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): teste\teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 19
+[07-Jan-2019 03:39:03 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Notification\OBNotification::GetVar() must be an instance of Notification\Object, instance of teste\teste given, called in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 16 and defined in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:19
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(16): Notification\OBNotification->GetVar(Object(teste\teste))
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(16): Notification\OBNotification->__construct(Object(teste\teste))
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): teste\teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 19
+[07-Jan-2019 03:41:25 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:41:25 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:41:25 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:41:25 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:41:25 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:41:25 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:42:23 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:37 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:37 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:37 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:37 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:42:37 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:09 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:43:09 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:43:09 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:43:09 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:43:09 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 23
+[07-Jan-2019 03:43:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:35 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:35 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:35 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:35 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:35 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:39 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:39 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:39 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:39 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:39 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:49 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:49 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:49 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:49 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:49 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:56 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:56 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:56 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:56 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:43:56 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:07 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:07 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:07 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:07 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:07 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:15 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 24
+[07-Jan-2019 03:44:51 Europe/Paris] PHP Fatal error:  Uncaught Error: Cannot access parent:: when current class scope has no parent in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:20
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(16): Notification\OBNotification->GetVar(Object(teste\teste))
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(16): Notification\OBNotification->__construct(Object(teste\teste))
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): teste\teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 20
+[07-Jan-2019 03:45:13 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 20
+[07-Jan-2019 03:47:34 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 19
+[07-Jan-2019 03:47:38 Europe/Paris] PHP Notice:  Undefined variable: _VARS in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 20
+[07-Jan-2019 04:33:07 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::IsNumeric() must be an instance of Notification\object, instance of teste\Teste returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:62
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): Notification\OBNotification->IsNumeric(10)
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): teste\Teste->__construct()
+#2 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 62
+[07-Jan-2019 04:40:43 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to undefined function Notification\GetNomeVar() in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:65
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): Notification\OBNotification->IsNumeric('asd')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): teste\Teste->__construct()
+#2 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 65
+[07-Jan-2019 04:41:27 Europe/Paris] PHP Notice:  Undefined index: b in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 51
+[07-Jan-2019 04:41:27 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:51
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(65): Notification\OBNotification->GetNomeVar('asd')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): Notification\OBNotification->IsNumeric('asd')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): teste\Teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 51
+[07-Jan-2019 04:43:44 Europe/Paris] PHP Notice:  Undefined index: b in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 49
+[07-Jan-2019 04:43:44 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:49
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(63): Notification\OBNotification->GetNomeVar('asd')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): Notification\OBNotification->IsNumeric('asd')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): teste\Teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 49
+[07-Jan-2019 04:44:11 Europe/Paris] PHP Notice:  Undefined index: b in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 51
+[07-Jan-2019 04:44:11 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:51
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(65): Notification\OBNotification->GetNomeVar('asd')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(20): Notification\OBNotification->IsNumeric('asd')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): teste\Teste->__construct()
+#3 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 51
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:08:12 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 26
+[07-Jan-2019 05:26:39 Europe/Paris] PHP Fatal error:  Access level to Notification\OBNotification::GetVar() must be public (as in class Interfaces\IOBNotification) in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 9
+[07-Jan-2019 05:27:41 Europe/Paris] PHP Fatal error:  Access type for interface method Interfaces\IOBNotification::GetVar() must be omitted in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\Interfaces\IOBNotification.php on line 11
+[07-Jan-2019 05:29:03 Europe/Paris] PHP Fatal error:  Access level to Notification\OBNotification::GetVar() must be public (as in class Interfaces\IOBNotification) in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 9
+[07-Jan-2019 05:31:10 Europe/Paris] PHP Fatal error:  Access level to Notification\OBNotification::GetVar() must be public (as in class Interfaces\IOBNotification) in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 9

@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Notification\\": "bin/",
+            "Interfaces\\": "Interfaces/",
+            "teste\\": "testes/"
+        }
+        
+    }
+}
