@@ -75,9 +75,13 @@ class OBNotification implements  Interfaces\IOBNotification{
     private function GetNomeVar($var) : string
     {
         foreach ($this as $key => $value)
-            if($value == $var)
+        {
+            if($value == $var && array_key_exists( $key , $this->_VARS) )
                 return $this->_VARS[$key];
+        }
 
+
+        return "Default :: $var";
     }
 
     /**
@@ -115,5 +119,146 @@ class OBNotification implements  Interfaces\IOBNotification{
 
         $var = null;
         return $this;
+    }
+
+    /**
+     * @param string $cpf
+     * @return $this
+     */
+    protected function IsCpf(string  $cpf){
+
+        $default = $cpf;
+
+        if(empty($cpf))
+        {
+            $this->SetErroCPF($default , "CPF : variavel não pode ser nula");
+            return $this;
+        }
+
+        $cpf = preg_replace("/[^0-9]/", "", $cpf);
+        $digitoUm = 0;
+        $digitoDois = 0;
+
+        if( strlen($cpf) < 11)
+        {
+            $this->SetErroCPF($default , "CPF menor que 11 digitos.");
+            return $this;
+        }
+
+        for($i = 0, $x = 10; $i <= 8; $i++, $x--){
+             $digitoUm += $cpf[$i] * $x;
+        }
+
+        for($i = 0, $x = 11; $i <= 9; $i++, $x--){
+
+            if(str_repeat($i, 11) == $cpf){
+                $this->SetErroCPF($default);
+                return $this;
+            }
+            $digitoDois += $cpf[$i] * $x;
+        }
+
+        $calculoUm  = (($digitoUm%11) < 2) ? 0 : 11-($digitoUm%11);
+        $calculoDois = (($digitoDois%11) < 2) ? 0 : 11-($digitoDois%11);
+
+        if($calculoUm <> $cpf[9] || $calculoDois <> $cpf[10]){
+            $this->SetErroCPF($default);
+            return $this;
+        }
+
+        return $this;
+    }
+
+    /**
+     * funcao auxiliar para o cpf
+     * @param string $cpf
+     * @param string $mes
+     */
+    protected final function SetErroCPF(string $cpf, string $mes = "CPF inválido")
+    {
+        $this->SetIsValid(false);
+        $vName = $this->GetNomeVar($cpf);
+        $this->SetNotification( $vName , $mes);
+    }
+
+    /**
+     * @param string $cnpj
+     * @return $this
+     */
+    protected function IsCnpj(string $cnpj)
+    {
+        // Verifica se um número foi informado
+        if(empty($cnpj)) {
+            $this->SetErroCnpj($cnpj , "CNPJ não pode ser nulo");
+            return $this;
+        }
+
+        // Elimina possivel mascara
+        $cnpj = preg_replace("/[^0-9]/", "", $cnpj);
+        $cnpj = str_pad($cnpj, 14, '0', STR_PAD_LEFT);
+
+        // Verifica se o numero de digitos informados é igual a 11
+        if (strlen($cnpj) != 14) {
+            $this->SetErroCnpj($cnpj , "CNPJ menor que 14 digitos");
+            return $this;
+        }
+
+        // Verifica se nenhuma das sequências invalidas abaixo
+        // foi digitada. Caso afirmativo, retorna falso
+        else if ($cnpj == '00000000000000' ||
+            $cnpj == '11111111111111' ||
+            $cnpj == '22222222222222' ||
+            $cnpj == '33333333333333' ||
+            $cnpj == '44444444444444' ||
+            $cnpj == '55555555555555' ||
+            $cnpj == '66666666666666' ||
+            $cnpj == '77777777777777' ||
+            $cnpj == '88888888888888' ||
+            $cnpj == '99999999999999') {
+
+            $this->SetErroCnpj($cnpj);
+            return $this;
+            // Calcula os digitos verificadores para verificar se o
+            // CPF é válido
+        } else {
+
+            $j = 5;
+            $k = 6;
+            $soma1 = "";
+            $soma2 = "";
+
+            for ($i = 0; $i < 13; $i++) {
+
+                $j = $j == 1 ? 9 : $j;
+                $k = $k == 1 ? 9 : $k;
+
+                $soma2 += ($cnpj{$i} * $k);
+
+                if ($i < 12) {
+                    $soma1 += ($cnpj{$i} * $j);
+                }
+
+                $k--;
+                $j--;
+
+            }
+
+            $digito1 = $soma1 % 11 < 2 ? 0 : 11 - $soma1 % 11;
+            $digito2 = $soma2 % 11 < 2 ? 0 : 11 - $soma2 % 11;
+
+            if((($cnpj{12} == $digito1) and ($cnpj{13} == $digito2)))
+                return $this;
+
+            $this->SetErroCnpj($cnpj);
+            return $this;
+
+        }
+    }
+
+    protected final function SetErroCnpj(string $cnpj ,string $mes = "CNPJ inválido")
+    {
+        $this->SetIsValid(false);
+        $vName = $this->GetNomeVar($cnpj);
+        $this->SetNotification( $vName , $mes);
     }
 }

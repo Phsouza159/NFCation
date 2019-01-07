@@ -179,3 +179,39 @@ Stack trace:
 [07-Jan-2019 05:27:41 Europe/Paris] PHP Fatal error:  Access type for interface method Interfaces\IOBNotification::GetVar() must be omitted in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\Interfaces\IOBNotification.php on line 11
 [07-Jan-2019 05:29:03 Europe/Paris] PHP Fatal error:  Access level to Notification\OBNotification::GetVar() must be public (as in class Interfaces\IOBNotification) in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 9
 [07-Jan-2019 05:31:10 Europe/Paris] PHP Fatal error:  Access level to Notification\OBNotification::GetVar() must be public (as in class Interfaces\IOBNotification) in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 9
+[07-Jan-2019 13:28:19 Europe/Paris] PHP Notice:  Undefined index: _ISINVALID in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:28:19 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:79
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(174): Notification\OBNotification->GetNomeVar('06411166161')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(138): Notification\OBNotification->SetErroCPF('06411166161', 'CPF menor que 1...')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): Notification\OBNotification->IsCpf('06411166161')
+#3 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(28): teste\Teste->__construct()
+#4 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:30:10 Europe/Paris] PHP Notice:  Undefined index: _ISINVALID in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:30:10 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:79
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(174): Notification\OBNotification->GetNomeVar('06411166161')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(138): Notification\OBNotification->SetErroCPF('06411166161', 'CPF menor que 1...')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): Notification\OBNotification->IsCpf('06411166161')
+#3 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(28): teste\Teste->__construct()
+#4 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:40:01 Europe/Paris] PHP Notice:  Undefined index: _ISINVALID in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:40:01 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:79
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(175): Notification\OBNotification->GetNomeVar('06411166161')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(139): Notification\OBNotification->SetErroCPF('06411166161', 'CPF menor que 1...')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): Notification\OBNotification->IsCpf('06411166161')
+#3 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(28): teste\Teste->__construct()
+#4 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:40:02 Europe/Paris] PHP Notice:  Undefined index: _ISINVALID in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79
+[07-Jan-2019 13:40:02 Europe/Paris] PHP Fatal error:  Uncaught TypeError: Return value of Notification\OBNotification::GetNomeVar() must be of the type string, null returned in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php:79
+Stack trace:
+#0 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(175): Notification\OBNotification->GetNomeVar('06411166161')
+#1 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php(139): Notification\OBNotification->SetErroCPF('06411166161', 'CPF menor que 1...')
+#2 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(24): Notification\OBNotification->IsCpf('06411166161')
+#3 D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\testes\teste.php(28): teste\Teste->__construct()
+#4 {main}
+  thrown in D:\EasyPHP-Devserver-17\eds-www\NotificationPHP\bin\OBNotification.php on line 79

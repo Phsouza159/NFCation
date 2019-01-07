@@ -10,6 +10,9 @@ class Teste extends Notification\NFCation {
     public $a;
     public $b;
     public $c;
+    public $cpf = "064.111.661-64";
+    public $cnpj = "78.132.679/0001-61";
+
 
     public function __construct(){
         $this->a = 10;
@@ -20,7 +23,9 @@ class Teste extends Notification\NFCation {
         parent::GetVar()
             ->IsNumeric($this->a)
             ->IsNumeric($this->b)
-            ->IsNull($this->c);
+            ->IsNull($this->c)
+            ->IsCpf($this->cpf)
+            ->IsCnpj($this->cnpj);
     }
 }
 
