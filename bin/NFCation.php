@@ -4,11 +4,12 @@
  */
 namespace Notification;
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Notification;
 
-class NFCation extends Notification\OBNotification {
+class NFCation extends Notification\OBNotification
+{
     /**
      * NFCation constructor.
      * @param $ob
@@ -17,4 +18,8 @@ class NFCation extends Notification\OBNotification {
        parent::__construct($ob);
 
     }
+    /**
+     * ADICIONAR NOTIFICACAO
+     *
+     */
 }

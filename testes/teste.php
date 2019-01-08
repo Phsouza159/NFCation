@@ -2,7 +2,7 @@
 
 namespace teste;
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Notification;
 
@@ -30,6 +30,7 @@ class Teste extends Notification\NFCation {
 }
 
 $a = new Teste();
+
 echo "<pre>";
 
 print_r($a);

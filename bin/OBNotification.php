@@ -1,11 +1,13 @@
 <?php
+
 namespace Notification;
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Interfaces;
 
-class OBNotification implements  Interfaces\IOBNotification{
+class OBNotification  /* extends CLASS */  implements  Interfaces\IOBNotification
+{
 
     private $_NOTIFICATIONS = array();
     private $_ISVALID = true;
@@ -101,6 +103,117 @@ class OBNotification implements  Interfaces\IOBNotification{
     }
 
     /**
+     * @param $list
+     * @return $this
+     */
+    protected function IsArray( $list )
+    {
+        if(is_array( $list ))
+            return $this;
+
+        $this->SetIsValid(false);
+        $vName = $this->GetNomeVar($list );
+        $this->SetNotification( $vName , "$vName não é um array");
+        return $this;
+    }
+
+    /**
+     * @param $list
+     * @return $this
+     */
+    protected function IsArrayEmpty( $list )
+    {
+        $this->IsArray($list);
+        if($this->IsInValid())
+            return $this;
+
+        if(count($list) == 0)
+        {
+            $this->SetIsValid(false);
+            $vName = $this->GetNomeVar($list);
+            $this->SetNotification( $vName , "$vName não pode ser vazio");
+        }
+        return $this;
+    }
+
+    /**
+     * @param $object
+     * @return $this
+     */
+    protected function IsObjectEmpty( $object )
+    {
+        if(!is_object($object))
+        {
+            $this->SetErroObject($object, "Não é um objeto");
+            return $this;
+        }
+
+        if (empty((array) $object))
+        {
+            $this->SetErroObject($object, "Objeto não pode ser nulo");
+        }
+        return $this;
+    }
+
+    /**
+     * @param $string
+     * @return $this
+     */
+    protected function IsString( $string )
+    {
+        if(is_string($string))
+            return $this;
+
+        $this->SetIsValid(false);
+        $vName = $this->GetNomeVar($string);
+        $this->SetNotification( $vName , "Não é do tipo string");
+    }
+
+    /**
+     * @param $string
+     * @return $this
+     */
+    protected function IsStringEmpty($string)
+    {
+        if ($this->IsString($string) && $this->IsValid() )
+           return $this;
+
+        if(empty($string))
+        {
+            $vName = $this->GetNomeVar($string);
+            $this->SetNotification( $vName , "Não pode ser vazia");
+            return $this;
+        }
+    }
+
+    /**
+     * @param $email
+     * @return $this
+     */
+    protected function IsEmail( $email )
+    {
+        if( is_string($email) && preg_match("/@/" , $email ) &&  preg_match("/./" , $email ))
+            return $this;
+
+        $this->SetIsValid(false);
+        $vName = $this->GetNomeVar($email);
+        $this->SetNotification( $vName , "Email inválido");
+
+        return $this;
+    }
+
+    /**
+     * @param $object
+     * @param string $mes
+     */
+    protected final function SetErroObject( $object , $mes = "Objeto vazio")
+    {
+        $this->SetIsValid(false);
+        $vName = $this->GetNomeVar($object);
+        $this->SetNotification( $vName , $mes);
+    }
+
+    /**
      * @param $var
      * @return $this
      * @throws \Exception
@@ -187,39 +300,26 @@ class OBNotification implements  Interfaces\IOBNotification{
      */
     protected function IsCnpj(string $cnpj)
     {
-        // Verifica se um número foi informado
+        $default = $cnpj;
+
         if(empty($cnpj)) {
             $this->SetErroCnpj($cnpj , "CNPJ não pode ser nulo");
             return $this;
         }
 
-        // Elimina possivel mascara
         $cnpj = preg_replace("/[^0-9]/", "", $cnpj);
         $cnpj = str_pad($cnpj, 14, '0', STR_PAD_LEFT);
 
-        // Verifica se o numero de digitos informados é igual a 11
         if (strlen($cnpj) != 14) {
-            $this->SetErroCnpj($cnpj , "CNPJ menor que 14 digitos");
+            $this->SetErroCnpj($default , "CNPJ menor que 14 digitos");
             return $this;
         }
 
-        // Verifica se nenhuma das sequências invalidas abaixo
-        // foi digitada. Caso afirmativo, retorna falso
-        else if ($cnpj == '00000000000000' ||
-            $cnpj == '11111111111111' ||
-            $cnpj == '22222222222222' ||
-            $cnpj == '33333333333333' ||
-            $cnpj == '44444444444444' ||
-            $cnpj == '55555555555555' ||
-            $cnpj == '66666666666666' ||
-            $cnpj == '77777777777777' ||
-            $cnpj == '88888888888888' ||
-            $cnpj == '99999999999999') {
+        else if ($cnpj == '00000000000000' || $cnpj == '11111111111111' || $cnpj == '22222222222222' || $cnpj == '33333333333333' || $cnpj == '44444444444444' ||
+            $cnpj == '55555555555555' || $cnpj == '66666666666666' || $cnpj == '77777777777777' || $cnpj == '88888888888888' || $cnpj == '99999999999999') {
 
-            $this->SetErroCnpj($cnpj);
+            $this->SetErroCnpj($default);
             return $this;
-            // Calcula os digitos verificadores para verificar se o
-            // CPF é válido
         } else {
 
             $j = 5;
@@ -237,10 +337,8 @@ class OBNotification implements  Interfaces\IOBNotification{
                 if ($i < 12) {
                     $soma1 += ($cnpj{$i} * $j);
                 }
-
                 $k--;
                 $j--;
-
             }
 
             $digito1 = $soma1 % 11 < 2 ? 0 : 11 - $soma1 % 11;
@@ -249,12 +347,16 @@ class OBNotification implements  Interfaces\IOBNotification{
             if((($cnpj{12} == $digito1) and ($cnpj{13} == $digito2)))
                 return $this;
 
-            $this->SetErroCnpj($cnpj);
+            $this->SetErroCnpj($default);
             return $this;
 
         }
     }
 
+    /**
+     * @param string $cnpj
+     * @param string $mes
+     */
     protected final function SetErroCnpj(string $cnpj ,string $mes = "CNPJ inválido")
     {
         $this->SetIsValid(false);
